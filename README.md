@@ -1,10 +1,10 @@
 # Gatsby Starter Kontent Lumen
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/Kentico/gatsby-kontent-starter-lumen/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ondrabus/nuxt3-starter-kontent-lumen/main/LICENSE)
 [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-kontent)
-[![Live demo](https://img.shields.io/badge/Live-Demo-00C7B7.svg?logo=netlify)](https://gatsby-starter-kontent-lumen.netlify.com/)
+[![Live demo](https://img.shields.io/badge/Live-Demo-00C7B7.svg?logo=netlify)](https://nuxt3-starter-kontent-lumen.netlify.com/)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2adc83d6-9eba-45fc-b95c-c205e75d3189/deploy-status)](https://app.netlify.com/sites/gatsby-starter-kontent-lumen/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2adc83d6-9eba-45fc-b95c-c205e75d3189/deploy-status)](https://app.netlify.com/sites/nuxt3-starter-kontent-lumen/deploys)
 
 Lumen is a minimal, lightweight and mobile-first starter for creating blogs.
 
