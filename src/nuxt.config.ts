@@ -20,6 +20,12 @@ export default defineNuxtConfig({
         link: [{
             'rel': 'stylesheet',
             'href': '/fonts/fontello-771c82e0/css/fontello.css'
-        }]
+        }],
+        script: [
+            {
+                'type': 'text/javascript',
+                'src': 'https://cdn.jsdelivr.net/npm/@kentico/kontent-smart-link@2.0.0/dist/kontent-smart-link.umd.min.js'
+            }
+        ]
     },
 })
