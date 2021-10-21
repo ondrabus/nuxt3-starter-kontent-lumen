@@ -92,11 +92,24 @@ The configuration is defined in `nuxt.config.ts` under `publicRuntimeConfig` sec
 
 ### Preview Deploy
 
-To allow this example load unpublished content via  [Preview Delivery API](https://docs.kontent.ai/reference/delivery-api#section/Production-vs.-Preview), you just need to adjust `.env` file created in ["Join codebase to content data"](#Join-codebase-and-content-data) section by setting these environment variables:
+To allow this example load unpublished content via  [Preview Delivery API](https://docs.kontent.ai/reference/delivery-api#section/Production-vs.-Preview), you need to adjust `.env` file created in ["Join codebase to content data"](#Join-codebase-and-content-data) section by setting the following environment variable:
 
-+ KONTENT_PREVIEW_KEY=`<PREVIEW_API_KEY>`by passing the [Preview authentication key](https://docs.kontent.ai/reference/delivery-api#section/Authentication)
-+ KONTENT_PREVIEW_KEY=`true`
+`KONTENT_PREVIEW_KEY=<PREVIEW_API_KEY>` by passing the [Preview authentication key](https://docs.kontent.ai/reference/delivery-api#section/Authentication)
 
+You also need to adjust the `nuxt.config.ts` which holds the configuration for the `deliveryClient`:
+
+```js
+...
+publicRuntimeConfig: {
+  kontent: {
+    projectId: process.env.KONTENT_PROJECT_ID,
+    previewApiKey: process.env.KONTENT_PREVIEW_KEY,
+    defaultQueryConfig: {
+      usePreviewMode: true
+  }
+}
+...
+```
 
 #### Preview URLs
 
