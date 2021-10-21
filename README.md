@@ -1,4 +1,4 @@
-# Gatsby Starter Kontent Lumen
+# Nuxt 3 + Kontent by Kentico starter
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ondrabus/nuxt3-starter-kontent-lumen/main/LICENSE)
 [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-kontent)
