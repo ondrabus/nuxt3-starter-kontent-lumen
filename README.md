@@ -16,7 +16,7 @@ Lumen is a minimal, lightweight and mobile-first starter for creating blogs.
 + Nuxt 3 as a static site generator
 + TypeScript
 + Content from [Kontent](http://kontent.ai/) headless CMS.
-+ [Kontent Delivery JS SDK (^11.0.0)](https://github.com/Kentico/kontent-delivery-sdk-js/tree/vnext)
++ [Kontent Delivery JS SDK (^11.0.0)](https://github.com/Kentico/kontent-delivery-sdk-js/tree/vnext) via [Kontent Nuxt3 module](https://github.com/ondrabus/kontent-nuxt3-module)
 + [Kontent Model generator (^4.0.0)](https://github.com/Kentico/kontent-model-generator-js) to automatically generate content types into strongly typed models.
 + Uses [Pinia](https://pinia.esm.dev/) as a data store.
 + [Mobile-First](https://medium.com/@mrmrs_/mobile-first-css-48bc4cc3f60f) approach in development.
@@ -73,6 +73,7 @@ Install the dependencies and run production build
 ```sh
 npm install
 npm run build
+npm run start
 ```
 
 ## Fully static site
@@ -87,8 +88,7 @@ This implementation uses [the new JS Delivery SDK for Kontent](https://github.co
 const kontent = useNuxtApp().$kontent
 ```
 
-The configuration is defined in `nuxt.config.ts` under `publicRuntimeConfig` section. The plugin expects an object `kontent` that respects the standard `IDeliveryClientConfig` interface (see [client configuration](https://github.com/Kentico/kontent-delivery-sdk-js/tree/vnext#client-configuration) on the official SDK page).
-
+See the configuration details on the [Kontent Nuxt3 module page](https://github.com/ondrabus/kontent-nuxt3-module).
 
 ### Preview Deploy
 
