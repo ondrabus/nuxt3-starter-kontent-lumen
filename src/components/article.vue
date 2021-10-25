@@ -3,10 +3,10 @@
     <div class="article__meta">
       <time
         class="article__meta-time"
-        :dateTime="moment(data.elements.date.value).format('MMMM D, YYYY')"
+        :dateTime="$dateFormat(data.elements.date.value, 'MMMM D, YYYY')"
         data-kontent-element-codename="date"
       >
-        {{ moment(data.elements.date.value).format("MMMM YYYY") }}
+        {{$dateFormat(data.elements.date.value, "MMMM YYYY")}}
       </time>
       <span class="article__meta-divider" />
       <span
@@ -35,14 +35,7 @@
 </template>
 
 <script lang="ts">
-import moment from 'moment'
-
 export default ({
-    async setup() {
-        return {
-            moment
-        }
-    },
     props: ["data"],
 });
 </script>

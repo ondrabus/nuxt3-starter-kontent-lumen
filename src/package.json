@@ -10,12 +10,13 @@
   "devDependencies": {
     "@kentico/kontent-delivery": "^11.0.0-5",
     "@kentico/kontent-model-generator": "^3.3.0-0",
+    "kontent-nuxt3-module": "^1.0.0-release",
+    "@types/luxon": "^2.0.5",
     "nuxt3": "latest",
     "sass": "^1.43.2"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.0.7",
-    "moment": "^2.29.1",
     "pinia": "^2.0.0-rc.14"
   }
 }

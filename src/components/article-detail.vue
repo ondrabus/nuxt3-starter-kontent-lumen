@@ -17,7 +17,7 @@
         ></div>
       </div>
       <div class="article-single__date" data-kontent-element-codename="date">
-        <em> Published {{ moment(data.elements.date.value).format("D MMM YYYY") }} </em>
+        <em> Published {{$dateFormat(data.elements.date.value, "D MMM YYYY")}}</em>
       </div>
       <div class="article-single__footer">
         <div class="article-single__tags">
@@ -57,15 +57,11 @@
 </template>
 
 <script lang="ts">
-    import moment from "moment";
 
     export default ({
-        async setup() {
-            return {
-                moment
-            }
-        },
-        props: ["data", "author", "metadata"]
+      setup(){
+      },
+        props: ["data", "author", "metadata"],
     });
 </script>
 

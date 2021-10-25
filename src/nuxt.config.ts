@@ -2,7 +2,8 @@ import { defineNuxtConfig } from 'nuxt3'
 
 export default defineNuxtConfig({
     buildModules: [
-        ['@pinia/nuxt']
+        ['@pinia/nuxt'],
+        ['kontent-nuxt3-module']
     ],
     publicRuntimeConfig: {
         kontent: {

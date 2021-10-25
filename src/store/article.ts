@@ -1,8 +1,6 @@
 
 import { defineStore } from "pinia";
 import { Article, Article_CODENAME } from "~~/models/article";
-import { getCurrentInstance as getVM } from "vue"
-import { NuxtApp, useNuxtApp } from '#app'
 import { DeliveryClient } from "@kentico/kontent-delivery";
 
 interface ArticleState {

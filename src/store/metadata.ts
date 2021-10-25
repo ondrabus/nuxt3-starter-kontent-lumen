@@ -2,8 +2,6 @@
 import { defineStore } from "pinia";
 import { Author, Author_CODENAME } from "~~/models/author";
 import { Site_metadata, Site_metadata_CODENAME } from "~~/models/site_metadata";
-import { getCurrentInstance as getVM } from "vue";
-import { useNuxtApp } from '#app'
 import { DeliveryClient } from "@kentico/kontent-delivery";
 
 interface MetadataState {
