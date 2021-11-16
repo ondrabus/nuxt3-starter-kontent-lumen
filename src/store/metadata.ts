@@ -1,19 +1,20 @@
 
 import { defineStore } from "pinia";
-import { Author, Author_CODENAME } from "~~/models/author";
-import { Site_metadata, Site_metadata_CODENAME } from "~~/models/site_metadata";
+import { Author } from "~~/models/author";
+import { projectModel } from "~~/models/_project";
+import { SiteMetadata } from "~~/models/site_metadata";
 import { DeliveryClient } from "@kentico/kontent-delivery";
 
 interface MetadataState {
     author: Author,
-    metadata: Site_metadata,
+    metadata: SiteMetadata,
     dataLoaded: boolean,
 }
 
 export const useMetadata = defineStore('metadata', {
     state: (): MetadataState => ({
         author: {} as Author,
-        metadata: {} as Site_metadata,
+        metadata: {} as SiteMetadata,
         dataLoaded: false
     }),
     actions: {
@@ -21,11 +22,11 @@ export const useMetadata = defineStore('metadata', {
             if (!this.dataLoaded){
 
                 this.author = (await kontent
-                    .item<Author>(Author_CODENAME)
+                    .item<Author>(projectModel.contentTypes.author.codename)
                     .toPromise()).data.item
 
                 this.metadata = (await kontent
-                    .item<Site_metadata>(Site_metadata_CODENAME)
+                    .item<SiteMetadata>(projectModel.contentTypes.site_metadata.codename)
                     .toPromise()).data.item
 
                 this.dataLoaded = true

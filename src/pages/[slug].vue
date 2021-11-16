@@ -8,12 +8,12 @@
     <div class="content">
       <div class="content__inner">
         <div class="page" :data-kontent-item-id="menuItem.elements.content.linkedItems[0].system.id">
-          <h1 class="page__title" data-kontent-element-codename="title">
+          <h1 class="page__title" :data-kontent-element-codename="$projectModel.contentTypes.page.elements.title.codename">
             {{ menuItem.elements.content.linkedItems[0].elements.title.value }}
           </h1>
           <div
             class="page__body"
-            data-kontent-element-codename="description"
+            :data-kontent-element-codename="$projectModel.contentTypes.page.elements.description.codename"
             v-html="menuItem.elements.content.linkedItems[0].elements.description.value"
           ></div>
         </div>

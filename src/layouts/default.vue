@@ -5,7 +5,8 @@
 </template>
 
 <script lang="ts" setup>
-    const projectId = process.env.VITE_KONTENT_PROJECT_ID ?? '';
+    import { useNuxtApp } from '#app'
+    const projectId = useNuxtApp().$config.kontent.projectId
 </script>
 
 <style lang="scss">

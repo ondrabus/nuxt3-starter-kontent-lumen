@@ -7,23 +7,23 @@
     </div>
     <div class="article-single" :data-kontent-item-id="data.system.id">
       <div class="article-single__inner">
-        <h1 class="article-single__title" data-kontent-element-codename="title">
+        <h1 class="article-single__title" :data-kontent-element-codename="$projectModel.contentTypes.article.elements.title.codename">
           {{ data.elements.title.value }}
         </h1>
         <div
-          data-kontent-element-codename="content"
+          :data-kontent-element-codename="$projectModel.contentTypes.article.elements.content.codename"
           class="article-single__body"
           v-html="data.elements.content.value"
         ></div>
       </div>
-      <div class="article-single__date" data-kontent-element-codename="date">
+      <div class="article-single__date" :data-kontent-element-codename="$projectModel.contentTypes.article.elements.date.codename">
         <em> Published {{$dateFormat(data.elements.date.value, "D MMM YYYY")}}</em>
       </div>
       <div class="article-single__footer">
         <div class="article-single__tags">
           <ul
             class="article-single__tags-list"
-            data-kontent-element-codename="tags"
+            :data-kontent-element-codename="$projectModel.contentTypes.article.elements.tags.codename"
           >
             <li
               v-for="tag in data.elements.tags.linkedItems"
@@ -57,12 +57,9 @@
 </template>
 
 <script lang="ts">
-
-    export default ({
-      setup(){
-      },
-        props: ["data", "author", "metadata"],
-    });
+  export default ({
+    props: ["data", "author", "metadata"]
+  });
 </script>
 
 <style lang="scss">

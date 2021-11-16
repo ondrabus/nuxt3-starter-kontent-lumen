@@ -10,20 +10,20 @@
                 width="75"
                 height="75"
                 :alt="author.elements.name.value"
-                data-kontent-element-codename="avatar_image"
+                :data-kontent-element-codename="$projectModel.contentTypes.author.elements.avatar_image.codename"
               />
             </nuxt-link>
-            <h1 v-if="isHomePage" class="sidebar__author-title" data-kontent-element-codename="name">
+            <h1 v-if="isHomePage" class="sidebar__author-title" :data-kontent-element-codename="$projectModel.contentTypes.author.elements.name.codename">
                 <nuxt-link class="sidebar__author-title-link" to="/">
                     {{author.elements.name.value}}
                 </nuxt-link>
             </h1>
-            <h2 v-else class="sidebar__author-title" data-kontent-element-codename="name">
+            <h2 v-else class="sidebar__author-title" :data-kontent-element-codename="$projectModel.contentTypes.author.elements.name.codename">
                 <nuxt-link class="sidebar__author-title-link" to="/">
                     {{author.elements.name.value}}
                 </nuxt-link>
             </h2>
-            <p class="sidebar__author-subtitle" data-kontent-element-codename="bio">
+            <p class="sidebar__author-subtitle" :data-kontent-element-codename="$projectModel.contentTypes.author.elements.bio.codename">
                 {{author.elements.bio.value}}
             </p>
           </div>
@@ -37,9 +37,9 @@
     </div>
 </template>
 <script lang="ts">
-import { useMetadata } from "../store/metadata";
+import { useMetadata } from "../store/metadata"
 import { storeToRefs } from 'pinia'
-import { useNuxtApp } from '#app';
+import { useNuxtApp } from '#app'
 
 export default {
     async setup() {

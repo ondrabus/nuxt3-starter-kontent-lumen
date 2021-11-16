@@ -1,7 +1,7 @@
 <template>
   <div class="links">
     <ul class="links__list">
-      <li v-if="data.elements.twitter.value" class="links__list-item" data-kontent-element-codename="twitter">
+      <li v-if="data.elements.twitter.value" class="links__list-item" :data-kontent-element-codename="$projectModel.contentTypes.author.elements.twitter.codename">
         <a
           :href="`https://www.twitter.com/${data.elements.twitter.value}`"
           target="_blank"
@@ -10,7 +10,7 @@
           <i class="icon-twitter" />
         </a>
       </li>
-      <li v-if="data.elements.github.value" class="links__list-item" data-kontent-element-codename="github">
+      <li v-if="data.elements.github.value" class="links__list-item" :data-kontent-element-codename="$projectModel.contentTypes.author.elements.github.codename">
         <a
           :href="`https://www.github.com/${data.elements.github.value}`"
           target="_blank"
@@ -19,7 +19,7 @@
           <i class="icon-github" />
         </a>
       </li>
-      <li v-if="data.elements.vk.value" class="links__list-item" data-kontent-element-codename="vk">
+      <li v-if="data.elements.vk.value" class="links__list-item" :data-kontent-element-codename="$projectModel.contentTypes.author.elements.vk.codename">
         <a
           :href="`https://www.vk.com/${data.elements.vk.value}`"
           target="_blank"
@@ -30,12 +30,12 @@
       </li>
     </ul>
     <ul class="links__list">
-      <li v-if="data.elements.email.value" class="links__list-item" data-kontent-element-codename="email">
+      <li v-if="data.elements.email.value" class="links__list-item" :data-kontent-element-codename="$projectModel.contentTypes.author.elements.email.codename">
         <a :href="`mailto:${data.elements.email.value}`">
           <i class="icon-mail" />
         </a>
       </li>
-      <li v-if="data.elements.telegram.value" class="links__list-item" data-kontent-element-codename="telegram">
+      <li v-if="data.elements.telegram.value" class="links__list-item" :data-kontent-element-codename="$projectModel.contentTypes.author.elements.telegram.codename">
         <a :href="`telegram:${data.elements.telegram.value}`">
           <i class="icon-paper-plane" />
         </a>

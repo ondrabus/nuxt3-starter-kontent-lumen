@@ -1,6 +1,7 @@
 import { DeliveryClient } from "@kentico/kontent-delivery";
 import { defineStore } from "pinia";
-import { Tag, Tag_CODENAME } from "~~/models/tag";
+import { Tag } from "~~/models/tag";
+import { projectModel } from "~~/models/_project";
 
 interface TagState {
     tags: Tag[],
@@ -17,7 +18,7 @@ export const useTag = defineStore('tag', {
             if (!this.dataLoaded){
                 this.tags = (await kontent
                     .items<Tag>()
-                    .type(Tag_CODENAME)
+                    .type(projectModel.contentTypes.tag.codename)
                     .toPromise()).data.items
                 this.dataLoaded = true
             }

@@ -1,6 +1,7 @@
 
 import { defineStore } from "pinia";
-import { Article, Article_CODENAME } from "~~/models/article";
+import { Article } from "~~/models/article";
+import { projectModel } from "~~/models/_project";
 import { DeliveryClient } from "@kentico/kontent-delivery";
 
 interface ArticleState {
@@ -21,8 +22,8 @@ export const useArticle = defineStore('article', {
             if (!this.dataLoaded){
                 this.articles = (await kontent
                     .items<Article>()
-                    .type(Article_CODENAME)
-                    .orderByDescending("elements.date")
+                    .type(projectModel.contentTypes.article.codename)
+                    .orderByDescending(`elements.${projectModel.contentTypes.article.elements.date.codename}`)
                     .toPromise()).data.items
                 this.dataLoaded = true
             }

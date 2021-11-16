@@ -1,7 +1,8 @@
 
 import { DeliveryClient } from "@kentico/kontent-delivery";
 import { defineStore } from "pinia";
-import { Category, Category_CODENAME } from "~~/models/category";
+import { Category } from "~~/models/category";
+import { projectModel } from "~~/models/_project";
 
 interface CategoryState {
     categories: Category[],
@@ -18,7 +19,7 @@ export const useCategory = defineStore('category', {
             if (!this.dataLoaded){
                 this.categories = (await kontent
                     .items<Category>()
-                    .type(Category_CODENAME)
+                    .type(projectModel.contentTypes.category.codename)
                     .toPromise()).data.items
                 this.dataLoaded = true
             }

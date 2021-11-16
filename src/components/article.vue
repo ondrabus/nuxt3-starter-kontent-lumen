@@ -4,7 +4,7 @@
       <time
         class="article__meta-time"
         :dateTime="$dateFormat(data.elements.date.value, 'MMMM D, YYYY')"
-        data-kontent-element-codename="date"
+        :data-kontent-element-codename="$projectModel.contentTypes.article.elements.date.codename"
       >
         {{$dateFormat(data.elements.date.value, "MMMM YYYY")}}
       </time>
@@ -12,7 +12,7 @@
       <span
         class="article__meta-category"
         :key="data.elements.category.linkedItems[0].elements.slug.value"
-        data-kontent-element-codename="category"
+        :data-kontent-element-codename="$projectModel.contentTypes.article.elements.category.codename"
       >
         <nuxt-link
           :to="`/category/${data.elements.category.linkedItems[0].elements.slug.value}/`"
@@ -22,12 +22,12 @@
         </nuxt-link>
       </span>
     </div>
-    <h2 class="article__title" data-kontent-element-codename="title">
+    <h2 class="article__title" :data-kontent-element-codename="$projectModel.contentTypes.article.elements.title.codename">
       <nuxt-link class="article__title-link" :to="`/article/${data.elements.slug.value}`">
         {{ data.elements.title.value }}
       </nuxt-link>
     </h2>
-    <p class="article__description" data-kontent-element-codename="content" v-html="data.elements.content.value.substr(3, Math.min(200, data.elements.content.value.length - 6))"></p>
+    <p class="article__description" :data-kontent-element-codename="$projectModel.contentTypes.article.elements.content.codename" v-html="data.elements.content.value.substr(3, Math.min(200, data.elements.content.value.length - 6))"></p>
     <nuxt-link class="article__readmore" :to="`/article/${data.elements.slug.value}`">
       Read
     </nuxt-link>
